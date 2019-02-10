@@ -1,0 +1,66 @@
+﻿<Page x:Class="DesignMaterial.Registro"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DesignMaterial"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Registro">
+
+    <Grid Margin="0,0,0,0">
+        <TextBlock Height="25" Margin="315,0,278,0" TextWrapping="Wrap" Text="Consultas e relatórios" FontWeight="Black" VerticalAlignment="Top" Width="207" FontSize="20"/>
+        <Button Content="Exibir todos registros" HorizontalAlignment="Left" Height="40" Margin="575,50,0,0" VerticalAlignment="Top" Width="180" AutomationProperties.Name="btnMostraTodos" FontSize="10" Click="AbrirMostrarTodos" Background="#FF230000" BorderBrush="#FF230000" Foreground="White"/>
+        <TextBox x:Name="boxMostra" HorizontalAlignment="Left" Margin="580,90,0,0" VerticalAlignment="Top" Height="342" Width="170" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" BorderBrush="#FF230000" IsReadOnly="True"/>
+
+        <StackPanel HorizontalAlignment="Left" Height="219" Margin="286,50,0,0" VerticalAlignment="Top" Width="247">
+            <TextBlock Text="Pesquisa" FontSize="20" FontWeight="DemiBold" Foreground="#FF230000"/>
+            <!-- FORMULÁRIO -->
+            <TextBlock Text="Informe o intervalo de Busca" FontSize="16" Margin="0 0 0 5"/>
+            <!-- FORMULÁRIO -->
+            <TextBlock x:Name="txtData1" Text="Data Inicial" Margin="0 10 0 0" FontSize="14"/>
+            <TextBox x:Name="boxData1" Width="100" HorizontalAlignment="Left" FontSize="12" ToolTip="DD/MM/AA"/>
+            <TextBlock x:Name="txtData2" Text="Data Final" Margin="0 10 0 0" FontSize="14"/>
+            <TextBox x:Name="boxData2" Width="100" HorizontalAlignment="Left" FontSize="12" ToolTip="DD/MM/AA"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="btnBuscar" Content="Buscar" FontSize="10" Margin="0 5 0 5" Click="Procurar" Background="#FF230000" BorderBrush="#FF230000" Foreground="White"/>
+                <Button Grid.Column="1" x:Name="btnLimpar" Content="Limpar" FontSize="10" Margin="5 0 0 0" Click="Limpar_Click" Background="#FF230000" BorderBrush="#FF230000" Foreground="White"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="145" Margin="286,279,0,0" VerticalAlignment="Top" Width="247">
+            <TextBlock TextWrapping="Wrap" Text="Informe o codigo do registro a ser apagado" FontSize="16" Margin="0 0 0 5" Height="46"/>
+            <!-- FORMULÁRIO -->
+            <TextBox x:Name="boxCod" Width="100" HorizontalAlignment="Left" FontSize="12"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="Excluir" Content="Excluir" FontSize="10" Margin="0 5 0 5" Click="Excluir_Click" Background="#FF230000" BorderBrush="#FF230000" Foreground="White"/>
+                <Button Grid.Column="1" x:Name="btnLimparCod" Content="Limpar" FontSize="10" Margin="5 0 0 0" Background="#FF230000" BorderBrush="#FF230000" Foreground="White"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="340" Margin="110,50,0,0" VerticalAlignment="Top" Width="150">
+
+            <TextBlock Text="Balanço geral" FontSize="20"  Foreground="#FF230000" FontWeight="DemiBold" Width="192"/>
+
+            <TextBlock FontSize="16" Text="Entradas" Margin="5,5,57,5"/>
+            <TextBlock x:Name="txtEntrada" Text="" Margin="10,0,0,0" Width="80" HorizontalAlignment="Left" Initialized="TxtEntrada_Initialized"/>
+            <TextBlock FontSize="16" Text="Saídas" Margin="5,10,0,10"/>
+            <TextBlock x:Name="txtSaida" Text="" Margin="10,0,0,0" Width="80" HorizontalAlignment="Left" Initialized="TxtSaida_Initialized"/>
+            <TextBlock Text="Saldo"  FontSize="18" Margin="0,10,0,5"/>
+            <TextBlock x:Name="txtSaldo" Margin="0 0 0 0" FontSize="18"  Initialized="TxtSaldo_Initialized" FontFamily="Arial" FontWeight="Black"/>
+
+        </StackPanel>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="387" Margin="575,50,0,0" VerticalAlignment="Top" Width="180"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="110,85,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.5,0.5">
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="110,135,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.5,0.5"/>
+    </Grid>
+</Page>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCadastro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Registro>
+    <Codigo>42dd-bb</Codigo>
+    <Data>01/01/2018</Data>
+    <Natureza>Crédito</Natureza>
+    <Descricao>teste2</Descricao>
+    <Valor>150.24</Valor>
+  </Registro>
+  <Registro>
+    <Codigo>4cfc-86</Codigo>
+    <Data>01/02/2018</Data>
+    <Natureza>Débito</Natureza>
+    <Descricao>teste3</Descricao>
+    <Valor>140.25</Valor>
+  </Registro>
+  <Registro>
+    <Codigo>4173-9e</Codigo>
+    <Data>25/11/2018</Data>
+    <Natureza>Crédito</Natureza>
+    <Descricao>Água</Descricao>
+    <Valor>500</Valor>
+  </Registro>
+  <Registro>
+    <Codigo>4b11-8e</Codigo>
+    <Data>24/11/2018</Data>
+    <Natureza>Crédito</Natureza>
+    <Descricao>dasd</Descricao>
+    <Valor>654</Valor>
+  </Registro>
+</ArrayOfCadastro>

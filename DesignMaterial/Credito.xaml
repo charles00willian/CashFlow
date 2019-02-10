@@ -1,0 +1,46 @@
+﻿<Page x:Class="DesignMaterial.Credito"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:DesignMaterial"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Credito">
+
+    <Border Padding="10">
+
+        <StackPanel Margin="60,0,0,0">
+            <TextBlock Text="Inserir Crédito" Margin="195,5,380,0"  FontSize="20" FontWeight="Black" />
+            <TextBlock x:Name="txtDescricaoC" Text="Descrição" Margin="90,40,0,0" FontSize="18" />
+            <TextBox x:Name="boxDescricaoC" Width="320" Margin="90,10,0,0" HorizontalAlignment="Left" FontSize="16" />
+            <TextBlock x:Name="txtFonteC" Text="Fonte" Margin="90,10,0,0" FontSize="18"/>
+            <TextBox x:Name="boxFonteC" Width="320" Margin="90,10,0,0" HorizontalAlignment="Left" FontSize="16"/>
+            <TextBlock x:Name="txtDataC" Text="Data" Margin="90,10,0,0" FontSize="18"/>
+            <TextBox x:Name="boxDataC" Width="320" Margin="90,10,0,0" HorizontalAlignment="Left" FontSize="16" ToolTip="DD/MM/AA"/>
+            <TextBlock x:Name="txtValorC" Text="Valor" Margin="90,10,0,0" FontSize="18"/>
+            <TextBox x:Name="boxValorC" Width="320" Margin="90,10,0,0" HorizontalAlignment="Left" FontSize="16"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="31*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="2" Margin="20,10" x:Name="btnSalvar" Click="SalvarCredito" Background="#FF230000" BorderBrush="#FF230000" ToolTip="Salvar" Height="Auto">
+                    <materialDesign:PackIcon Foreground="White"  Kind="ContentSave" Width="25" Height="25" ToolTip="Salvar"/>
+                </Button>
+                <Button Grid.Column="3" Margin="20,10" x:Name="btnLimpar" Click="LimparCampos" Background="#FF230000" BorderBrush="#FF230000" ToolTip="Limpar" Height="Auto">
+                    <materialDesign:PackIcon Foreground="White"  Kind="Clear" Width="25" Height="25" ToolTip="Limpar"/>
+                </Button>
+            </Grid>
+
+            <StackPanel Height="100"/>
+
+
+            <!-- FORMULÁRIO -->
+        </StackPanel>
+    </Border>
+</Page>
